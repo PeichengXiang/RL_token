@@ -1,0 +1,19 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pi-rlt-reproduction"
+version = "0.1.0"
+description = "Independent implementation of Physical Intelligence's RL Token"
+requires-python = ">=3.10"
+dependencies = ["numpy>=1.24", "torch>=2.4"]
+
+[project.optional-dependencies]
+tianji-data = ["h5py>=3.8"]
+
+[project.scripts]
+rlt = "rlt.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["rlt*"]
